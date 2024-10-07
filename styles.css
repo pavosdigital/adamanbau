@@ -216,7 +216,7 @@ section {
 /* Mobile Anpassungen */
 @media (max-width: 768px) {
     .hero {
-        height: 65vh; /* Reduziert die Höhe, um die Elemente höher zu schieben */
+        height: 80vh; /* Reduziert die Höhe, um die Elemente höher zu schieben */
     }
 
     .hero h1 {
