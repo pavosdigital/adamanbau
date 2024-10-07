@@ -738,7 +738,7 @@ footer .footer-links a:hover {
     /* Hero Section */
     .hero {
         height: 60vh; /* Reduziere die Höhe auf mobilen Geräten */
-        padding-top: 200px; /* Fügt oben mehr Abstand hinzu für mobile Geräte */
+        padding-top: 1500px; /* Fügt oben mehr Abstand hinzu für mobile Geräte */
     }
 
     .hero h1 {
