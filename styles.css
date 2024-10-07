@@ -215,17 +215,24 @@ section {
 
 /* Mobile Anpassungen */
 @media (max-width: 768px) {
+    .hero {
+        height: 65vh; /* Reduziert die Höhe, um die Elemente höher zu schieben */
+    }
+
     .hero h1 {
         font-size: 2.5rem;
+        margin-top: 0; /* Entfernt das zusätzliche Margin */
     }
 
     .hero p {
         font-size: 1.2rem;
+        margin-top: 5px; /* Verkleinert den Abstand */
     }
 
     .hero-button {
         font-size: 1.2rem;
         padding: 10px 30px;
+        margin-top: 10px; /* Verkleinert den Abstand zum Text */
     }
 }
 
