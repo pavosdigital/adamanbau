@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Adaman Bau GmbH</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Verlinkt die externe CSS-Datei -->
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <img src="logo.png" alt="Adaman Bau Logo" class="logo">
+            </div>
+            <div class="header-right">
+                <nav>
+                    <ul class="menu" id="menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="services.html">Leistungen</a></li>
+                        <li><a href="referenzen.html">Referenzen</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>                   
+                    </ul>
+                    <!-- Hamburger Icon (wird nur auf mobilen Geräten angezeigt) -->
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <video class="hero-video" id="backgroundVideo" autoplay muted playsinline>
+            <source src="hero10.mp4" type="video/mp4" id="videoSource">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <script>
+        function setVideoSource() {
+            const video = document.getElementById("backgroundVideo");
+            const videoSource = document.getElementById("videoSource");
+            
+            if (window.innerWidth < 768) {
+                if (videoSource.src.indexOf("hero11.mp4") === -1) {
+                    videoSource.src = "hero11.mp4";
+                    video.load();
+                }
+            } else {
+                if (videoSource.src.indexOf("hero10.mp4") === -1) {
+                    videoSource.src = "hero10.mp4";
+                    video.load();
+                }
+            }
+        }
+    
+        document.addEventListener("DOMContentLoaded", setVideoSource);
+        window.addEventListener("resize", setVideoSource);
+    
+        document.getElementById("backgroundVideo").addEventListener("ended", function () {
+            this.pause();
+        });
+    </script>
+    
+    <!-- Über uns Section für Adaman Bau -->
+    <section class="about-section">
+        <div class="about-container">
+            <h2>Unsere Aufgabe</h2>
+            <p>
+                Bei Adaman Bau GmbH stehen Qualität und Kundenzufriedenheit im Mittelpunkt.
+                Von der ersten Beratung bis zum Abschluss Ihres Bauprojekts setzen wir alles
+                daran, Ihre Wünsche effizient und nachhaltig umzusetzen.
+            </p>
+            <a href="about.html" class="about-button">Über Uns</a>
+        </div>
+    </section>    
+<!-- Services Section --> 
+<section class="services">
+    <div class="services-grid">
+        <div class="service-item">
+            <div class="service-image">
+                <a href="fassadendaemmung.html">
+                    <img src="2.png" alt="Fassadendämmung">
+                </a>
+            </div>
+            <div class="service-text">
+                <h3><a href="fassadendaemmung.html">Fassadendämmung</a></h3>
+                <p>Effiziente Fassadendämmung für den optimalen Wärmeschutz Ihres Gebäudes.</p>
+            </div>
+        </div>
+        
+        <div class="service-item">
+            <div class="service-image">
+                <a href="innenputz.html">
+                    <img src="3.png" alt="Innenputzarbeiten">
+                </a>
+            </div>
+            <div class="service-text">
+                <h3><a href="innenputz.html">Innenputzarbeiten</a></h3>
+                <p>Professionelle Innenputzarbeiten für ein optimales Raumklima und Schutz der Wände.</p>
+            </div>
+        </div>
+        
+        <div class="service-item">
+            <div class="service-image">
+                <a href="aussenputz.html">
+                    <img src="4.png" alt="Außenputzarbeiten">
+                </a>
+            </div>
+            <div class="service-text">
+                <h3><a href="aussenputz.html">Außenputzarbeiten</a></h3>
+                <p>Qualitative Außenputzarbeiten für eine widerstandsfähige und ästhetische Fassade.</p>
+            </div>
+        </div>
+
+        <div class="service-item">
+            <div class="service-image">
+                <a href="wdvs.html">
+                    <img src="5.png" alt="WDVS-Systeme">
+                </a>
+            </div>
+            <div class="service-text">
+                <h3><a href="wdvs.html">WDVS-Systeme</a></h3>
+                <p>Modernste Wärmedämmverbundsysteme (WDVS) für maximale Energieeffizienz.</p>
+            </div>
+        </div>
+
+        <div class="service-item">
+            <div class="service-image">
+                <a href="trockenbau.html">
+                    <img src="6.png" alt="Trockenbau">
+                </a>
+            </div>
+            <div class="service-text">
+                <h3><a href="trockenbau.html">Trockenbau</a></h3>
+                <p>Flexible Trockenbau-Lösungen für individuelle Raumaufteilungen und Renovierungen.</p>
+            </div>
+        </div>
+
+        <div class="service-item">
+            <div class="service-image">
+                <a href="sanierung.html">
+                    <img src="7.png" alt="Sanierung">
+                </a>
+            </div>
+            <div class="service-text">
+                <h3><a href="sanierung.html">Sanierung</a></h3>
+                <p>Komplette Sanierungslösungen für Alt- und Neubauten, um Ihren Wohnkomfort zu erhöhen.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const servicesContainer = document.querySelector('.services-grid');
+        let isScrollingLeft = true;
+
+        function scrollServices() {
+            if (isScrollingLeft) {
+                servicesContainer.scrollLeft += 1;
+                if (servicesContainer.scrollLeft >= servicesContainer.scrollWidth - servicesContainer.clientWidth) {
+                    isScrollingLeft = false;
+                }
+            } else {
+                servicesContainer.scrollLeft -= 1;
+                if (servicesContainer.scrollLeft <= 0) {
+                    isScrollingLeft = true;
+                }
+            }
+        }
+
+        setInterval(scrollServices, 20); // Geschwindigkeit des Scrollens
+    });
+</script>
+
+<section id="referenzen" class="referenzen">
+    <h2>Unsere Referenzen</h2>
+    <div class="images-grid">
+        <img src="1.JPG" alt="Referenz Projekt 1">
+        <img src="2.JPG" alt="Referenz Projekt 2">
+        <img src="3.JPG" alt="Referenz Projekt 3">
+    </div>
+    <div class="referenzen-button-container">
+        <a href="referenzen.html" class="referenzen-button">Mehr</a>
+    </div>
+</section>
+
+<section class="info-section">
+    <h2>Wieso uns wählen?</h2>
+    <div class="info-container">
+        <!-- Expertise -->
+        <div class="info-item">
+            <img src="bau.png" alt="Expertise Icon" class="info-icon">
+            <h3>Expertise</h3>
+            <p>Unsere langjährige Erfahrung und Fachkompetenz garantieren Ihnen höchste Qualität in jedem Projekt.</p>
+        </div>
+        <!-- Vertrauen und Zusammenarbeit -->
+        <div class="info-item">
+            <img src="hand.png" alt="Vertrauen und Zusammenarbeit Icon" class="info-icon">
+            <h3>Vertrauen und Zusammenarbeit</h3>
+            <p>Wir arbeiten eng mit Ihnen zusammen, um Ihre Wünsche zu realisieren und bauen auf Vertrauen.</p>
+        </div>
+        <!-- Konstante Ergebnisse -->
+        <div class="info-item">
+            <img src="steig.png" alt="Konstante Ergebnisse Icon" class="info-icon">
+            <h3>Konstante Ergebnisse</h3>
+            <p>Unsere Projekte liefern Ihnen kontinuierlich erstklassige Ergebnisse, die Ihre Erwartungen übertreffen.</p>
+        </div>
+    </div>
+</section>
+
+    <section id="kontakt" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-form-box">
+                <h2>Kontaktieren Sie uns</h2>
+                <p>Wir sind für Sie da! Schreiben Sie uns eine Nachricht, wir melden uns umgehend bei Ihnen.</p>
+                <form action="send_mail.php" method="post">
+                    <input type="text" name="name" placeholder="Ihr Name" required>
+                    <input type="email" name="email" placeholder="Ihre E-Mail" required>
+                    <input type="tel" name="phone" placeholder="Ihre Telefonnummer" required>
+                    <textarea name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
+                    <label>
+                    <button type="submit">Nachricht senden</button>
+                </form>
+            </div>
+            <div class="contact-details">
+                <div class="map-container">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.237148617749!2d13.415340399999998!3d52.51104720000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84f62e9cff89f%3A0x95340f74c318f5cf!2sAdaman%20Bau%20GmbH!5e0!3m2!1sde!2sde!4v1727961371195!5m2!1sde!2sde" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <footer>
+        <div class="container">
+            <img src="logo.png" alt="Logo" class="logo">
+            <p>© 2024 Adaman Bau GmbH. Alle Rechte vorbehalten.</p>
+            <div class="footer-links">
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+        <!-- JavaScript direkt vor dem schließenden </body> -->
+        <script>
+            // JavaScript für das Hamburger-Menü
+            document.getElementById('hamburger').addEventListener('click', function() {
+                document.getElementById('menu').classList.toggle('open');
+            });
+        </script>
+    </body>
+    </html>
+    
+</body>
+</html>
